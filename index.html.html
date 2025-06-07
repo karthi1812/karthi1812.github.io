@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karthikeyan Kandasamy | Supply Chain Professional</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #1a252f;
+            --gray: #7f8c8d;
+            --success: #27ae60;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: white;
+            padding: 2rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        .profile-container {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid rgba(255, 255, 255, 0.2);
+            background-color: #fff;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .profile-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .initials {
+            font-size: 5rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .header-text h1 {
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header-text p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--light);
+            max-width: 700px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .contact-item i {
+            color: var(--secondary);
+            font-size: 1.2rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            padding: 1rem 1.5rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--secondary);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 5rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2.2rem;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background: var(--secondary);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        /* Summary Section */
+        .summary-content {
+            background: white;
+            border-radius: 10px;
+            padding: 2.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .summary-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--secondary);
+        }
+        
+        .summary-content p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .highlight {
+            background: linear-gradient(120deg, rgba(52, 152, 219, 0.1), rgba(231, 76, 60, 0.1));
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+        
+        .highlight ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            list-style: none;
+        }
+        
+        .highlight li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.7rem;
+        }
+        
+        .highlight li i {
+            color: var(--success);
+            font-size: 1.1rem;
+            margin-top: 0.3rem;
+        }
+        
+        /* Experience Section */
+        .experience-timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .experience-timeline::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: var(--light);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            width: 50%;
+            margin-bottom: 3rem;
+            padding: 1.5rem;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-content {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            position: relative;
+        }
+        
+        .timeline-content::after {
+            content: '';
+            position: absolute;
+            border-style: solid;
+            width: 0;
+            height: 0;
+            top: 30px;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content::after {
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent white;
+            right: -10px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content::after {
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+            left: -10px;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            background-color: var(--secondary);
+            border: 4px solid white;
+            top: 30px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .timeline-item:nth-child(odd)::after {
+            right: -12px;
+        }
+        
+        .timeline-item:nth-child(even)::after {
+            left: -12px;
+        }
+        
+        .job-title {
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .company {
+            font-size: 1.1rem;
+            color: var(--secondary);
+            margin-bottom: 0.8rem;
+            display: block;
+        }
+        
+        .duration {
+            background: var(--light);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        
+        .job-description {
+            margin-top: 1rem;
+        }
+        
+        .job-description ul {
+            list-style: none;
+        }
+        
+        .job-description li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .job-description li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-size: 1.1rem;
+        }
+        
+        .achievement {
+            background: rgba(39, 174, 96, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            margin-top: 0.5rem;
+            display: inline-block;
+            font-weight: 500;
+            color: var(--success);
+        }
+        
+        /* Skills Section */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .skill-category {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .skill-category h3 {
+            color: var(--secondary);
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--light);
+            margin-bottom: 1.5rem;
+        }
+        
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+        
+        .skill-tag {
+            background: var(--light);
+            padding: 0.6rem 1.2rem;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+        
+        .skill-tag:hover {
+            background: var(--secondary);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        /* Education Section */
+        .education-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .education-item {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            position: relative;
+        }
+        
+        .education-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .education-icon i {
+            font-size: 2rem;
+            color: var(--secondary);
+        }
+        
+        .education-details h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.3rem;
+        }
+        
+        .education-details .institution {
+            font-size: 1.1rem;
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        
+        .education-details .degree {
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Certifications Section */
+        .certifications-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .cert-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.8rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .cert-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .cert-icon {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+        
+        .cert-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .footer-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .copyright {
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.6);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .experience-timeline::before {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+                left: 0 !important;
+            }
+            
+            .timeline-item::after {
+                left: 20px !important;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-content::after,
+            .timeline-item:nth-child(even) .timeline-content::after {
+                left: -10px;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent white transparent transparent;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="profile-container">
+                    <div class="initials">KK</div>
+                </div>
+                <div class="header-text">
+                    <h1>Karthikeyan Kandasamy</h1>
+                    <p>Supply Chain Professional | Procurement Specialist | Buyer/Expeditor</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>kaarthikkeyan18@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (226) 9758934</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Toronto, Ontario</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="nav-container">
+                <ul class="nav-links">
+                    <li><a href="#summary">Summary</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Summary Section -->
+    <section id="summary">
+        <div class="container">
+            <div class="section-title">
+                <h2>Professional Summary</h2>
+            </div>
+            <div class="summary-content">
+                <p>Detail-oriented Buyer with 7 years of experience in procurement, material planning, and supply chain support. Adept at managing purchase orders (POs), expediting material flow, and ensuring on-time deliveries to meet production demands. Skilled in ERP systems, MRO purchasing, supplier follow-ups, and inventory coordination. Strong problem-solving abilities with a focus on minimizing disruptions in the supply chain.</p>
+                
+                <div class="highlight">
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Purchase Order Management & Follow-Up</li>
+                        <li><i class="fas fa-check-circle"></i> Supplier Communication & Expediting</li>
+                        <li><i class="fas fa-check-circle"></i> MRO Purchasing</li>
+                        <li><i class="fas fa-check-circle"></i> ERP System Maintenance</li>
+                        <li><i class="fas fa-check-circle"></i> Non-Conforming Material (RMA) Process</li>
+                        <li><i class="fas fa-check-circle"></i> Inventory & Receiving Support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" style="background-color: #f5f7fa;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Work Experience</h2>
+            </div>
+            <div class="experience-timeline">
+                <!-- Linxon Experience -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="job-title">SCM Engineer</h3>
+                        <span class="company">Linxon India Pvt Ltd</span>
+                        <span class="duration">Jul 2023 - Dec 2023</span>
+                        <div class="job-description">
+                            <ul>
+                                <li>Managed and led a team of Junior Engineers handling multiple regions</li>
+                                <li>Provided guidance, training, and performance feedback to team members</li>
+                                <li>Reviewed invoices from suppliers using Kofax, ensuring accuracy</li>
+                                <li>Reviewed all AP issues, did vendor payment 3 way match</li>
+                                <li>Generated reports on accounts payable aging and payment status</li>
+                                <li>Provided Procurement forecasts for various projects</li>
+                            </ul>
+                            <div class="achievement">
+                                Improved budget forecast accuracy by 15%
+                            </div>
+                            <div class="achievement">
+                                Migrated top 80% of spend suppliers to SAP Ariba within a quarter
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Parker Hannifin Experience -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="job-title">Sourcing Engineer</h3>
+                        <span class="company">Parker Hannifin India Pvt Ltd</span>
+                        <span class="duration">Jul 2016 - Jun 2023</span>
+                        <div class="job-description">
+                            <ul>
+                                <li>Identified new vendors and negotiated prices and terms</li>
+                                <li>Created reports and monitored KPIs</li>
+                                <li>Coordinated with suppliers to confirm order details and tracked deliveries</li>
+                                <li>Reviewed and tracked open purchase orders daily</li>
+                                <li>Managed supplier NCR and coordinated RMA documentation</li>
+                                <li>Handled MRO purchasing for production/facility consumables</li>
+                                <li>Maintained P-Card transactions and supported finance</li>
+                            </ul>
+                            <div class="achievement">
+                                Achieved 98% on-time delivery rate
+                            </div>
+                            <div class="achievement">
+                                Reduced procurement costs by 18% through strategic initiatives
+                            </div>
+                            <div class="achievement">
+                                Reduced excess inventory by 28%
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cleveland-Cliffs Experience -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="job-title">General Labour (Part time)</h3>
+                        <span class="company">Cleveland-Cliffs</span>
+                        <span class="duration">Apr 2024 - Present</span>
+                        <div class="job-description">
+                            <ul>
+                                <li>Performed tasks on the production line</li>
+                                <li>Checked accuracy and quality of products shipped or received</li>
+                                <li>Conducted quality inspections to ensure products meet specifications</li>
+                                <li>Assisted press operators with setup procedures</li>
+                                <li>Maintained and enhanced cleanliness in work area</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <div class="section-title">
+                <h2>Professional Skills</h2>
+            </div>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Procurement & Supply Chain</h3>
+                    <div class="skills-list">
+                        <div class="skill-tag">Purchase Order Management</div>
+                        <div class="skill-tag">Supplier Management</div>
+                        <div class="skill-tag">MRO Purchasing</div>
+                        <div class="skill-tag">Inventory Control</div>
+                        <div class="skill-tag">Material Planning</div>
+                        <div class="skill-tag">Expediting</div>
+                        <div class="skill-tag">RMA Process</div>
+                        <div class="skill-tag">Vendor Negotiation</div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Technical & Systems</h3>
+                    <div class="skills-list">
+                        <div class="skill-tag">SAP Ariba</div>
+                        <div class="skill-tag">ERP Systems</div>
+                        <div class="skill-tag">JD Edwards Enterprise One</div>
+                        <div class="skill-tag">MS Excel</div>
+                        <div class="skill-tag">Power BI</div>
+                        <div class="skill-tag">Python</div>
+                        <div class="skill-tag">Data Analysis</div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Methodologies & Practices</h3>
+                    <div class="skills-list">
+                        <div class="skill-tag">Lean Six Sigma</div>
+                        <div class="skill-tag">Kanban Principles</div>
+                        <div class="skill-tag">PFEP</div>
+                        <div class="skill-tag">VMI</div>
+                        <div class="skill-tag">Root Cause Analysis</div>
+                        <div class="skill-tag">KPI Monitoring</div>
+                        <div class="skill-tag">Process Improvement</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" style="background-color: #f5f7fa;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Education</h2>
+            </div>
+            <div class="education-container">
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="education-details">
+                        <h3>Master of Management in Logistics and Supply Chain Management</h3>
+                        <span class="institution">Odette School of Business | University of Windsor</span>
+                        <span class="duration">Jan 2024 - Apr 2025</span>
+                    </div>
+                </div>
+                
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="education-details">
+                        <h3>Bachelor of Engineering in Mechanical Engineering</h3>
+                        <span class="institution">Anna University</span>
+                        <span class="duration">Jun 2013 - Jun 2016</span>
+                    </div>
+                </div>
+                
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="education-details">
+                        <h3>Diploma in Mechanical Engineering</h3>
+                        <span class="institution">Sri Sairam Polytechnic College</span>
+                        <span class="duration">Jun 2010 - May 2013</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications">
+        <div class="container">
+            <div class="section-title">
+                <h2>Licenses & Certifications</h2>
+            </div>
+            <div class="certifications-container">
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>KORNFERRY Leadership Certified</h3>
+                </div>
+                
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>AMCAT Certified Business Analyst</h3>
+                </div>
+                
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>UDEMY – Data Science</h3>
+                </div>
+                
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Cansell Certified</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>Let's connect to discuss supply chain optimization, procurement strategies, and operational efficiency.</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>kaarthikkeyan18@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+1 (226) 9758934</span>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+                <div class="copyright">
+                    &copy; 2023 Karthikeyan Kandasamy. All Rights Reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Add active class to current section in navigation
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-links a');
+            
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if(pageYOffset >= (sectionTop - 300)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if(link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
